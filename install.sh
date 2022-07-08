@@ -21,13 +21,16 @@ zshrc() {
     echo "             import spaceship                              "
     echo "-----------------------------------------------------------"
     ln -s "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
+    echo "==========================================================="
+    echo "             done done                                     "
+    echo "-----------------------------------------------------------"
 }
 
 zshrc
 
-# make directly highlighting readable - needs to be after zshrc line
-echo "" >> ~/.zshrc
-echo "# remove ls and directory completion highlight color" >> ~/.zshrc
-echo "_ls_colors=':ow=01;33'" >> ~/.zshrc
-echo 'zstyle ":completion:*:default" list-colors "${(s.:.)_ls_colors}"' >> ~/.zshrc
-echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
+# # make directly highlighting readable - needs to be after zshrc line
+# echo "" >> ~/.zshrc
+# echo "# remove ls and directory completion highlight color" >> ~/.zshrc
+# echo "_ls_colors=':ow=01;33'" >> ~/.zshrc
+# echo 'zstyle ":completion:*:default" list-colors "${(s.:.)_ls_colors}"' >> ~/.zshrc
+# echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
