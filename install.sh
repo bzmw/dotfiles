@@ -10,22 +10,18 @@ zshrc() {
     echo "-----------------------------------------------------------"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     echo "==========================================================="
-    echo "             cloning powerlevel10k                         "
+    echo "             cloning spaceship                             "
     echo "-----------------------------------------------------------"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
     echo "==========================================================="
     echo "             import zshrc                                  "
     echo "-----------------------------------------------------------"
     cat .zshrc > $HOME/.zshrc
     echo "==========================================================="
-    echo "             import powerlevel10k                          "
+    echo "             import spaceship                              "
     echo "-----------------------------------------------------------"
-    cat .p10k.zsh > $HOME/.p10k.zsh
+    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 }
-
-# change time zone
-sudo ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
-sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 zshrc
 
