@@ -12,7 +12,7 @@ zshrc() {
     echo "==========================================================="
     echo "             cloning spaceship                             "
     echo "-----------------------------------------------------------"
-    git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+    git clone https://github.com/spaceship-prompt/spaceship-prompt.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt" --depth=1
     echo "==========================================================="
     echo "             import zshrc                                  "
     echo "-----------------------------------------------------------"
@@ -20,10 +20,10 @@ zshrc() {
     echo "==========================================================="
     echo "             import spaceship                              "
     echo "-----------------------------------------------------------"
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+    ln -s "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
 }
 
-zshrc
+~/.zshrc
 
 # make directly highlighting readable - needs to be after zshrc line
 echo "" >> ~/.zshrc
