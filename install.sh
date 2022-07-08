@@ -23,7 +23,7 @@ zshrc() {
     ln -s "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
 }
 
-~/.zshrc
+zshrc
 
 # make directly highlighting readable - needs to be after zshrc line
 echo "" >> ~/.zshrc
